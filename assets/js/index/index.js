@@ -5,8 +5,7 @@ const inputPhone = document.getElementById("phone");
 const selectContactType = document.getElementById("contact-type");
 
 function CreateContactType() {
-    if(Validate()) {
-
+    if (Validate()) {
         const valueContact = selectContactType.value;
         const valueName = inputName.value;
         const valuePhone = inputPhone.value;
@@ -23,7 +22,7 @@ function CreateContactType() {
         divCardHeader.setAttribute("class", "card-header bg-success text-white");
 
         const h5Title = document.createElement("h5");
-        h5Title.setAttribute("class", "class-title");
+        h5Title.setAttribute("class", "card-title");
         h5Title.innerText = "Contacto -" + valueContact;
 
         const divCardBody = document.createElement("div");
@@ -34,20 +33,22 @@ function CreateContactType() {
 
         const liName = document.createElement("li");
         liName.setAttribute("class", "list-group-item");
-        liName.innerText = "Nombre -" + valueName;
+        liName.innerText = "Nombre: " + valueName;
 
         const liPhone = document.createElement("li");
         liPhone.setAttribute("class", "list-group-item");
-        liPhone.innerText = "Teléfono -" + valuePhone;
+        liPhone.innerText = "Telefono: " + valuePhone;
 
         const btnDelete = document.createElement("button");
         btnDelete.setAttribute("class", "btn btn-danger float-end");
         btnDelete.innerText = "Eliminar";
-        btnDelete.addEventListener("click", function(){
-            if(confirm("¿Deseas eliminar este contacto?")){
+        btnDelete.addEventListener("click", function () {
+            if (confirm("¿Deseas eliminar este contacto?")) {
                 mainContainer.removeChild(divColMd4);
             }
         });
+
+        divColMd4.appendChild(divCard);
 
         divCardHeader.appendChild(h5Title);
 
@@ -59,6 +60,8 @@ function CreateContactType() {
 
         divCard.appendChild(divCardHeader);
         divCard.appendChild(divCardBody);
+
+        
 
         mainContainer.appendChild(divColMd4);
 
