@@ -34,7 +34,7 @@
                               <div>
                                   <label for="contact-type">Tipo de contacto</label>
                                     <select class="form-select" id="contact-type">
-                                        <option selected>Seleccione un tipo de contacto</option>
+                                        <option value="" selected>Seleccione un tipo de contacto</option>
                                         <option value="Academico">Academico</option>
                                         <option value="Laboral">Laboral</option>
                                         <option value="Profesional">Profesional</option>
@@ -42,12 +42,31 @@
                               </div>
                               <br>
                               <button type="button" onclick="Validate()" class="btn btn-primary float-end">Guardar</button>
-                              <button type="button" class="btn btn-warning float-end mr-1">Limpiar</button>
+                              <button type="button" onclick="Clear()" class="btn btn-warning float-end mr-1">Limpiar</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-3"></div>
+        </div>
+
+        <div class="row margin-top" id="contact-container">
+            
+            <!-- <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="card-title">Contacto - Academico</h5>
+                        </div>
+                    <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Nombre: </li>
+                        <li class="list-group-item">Teléfono: </li>
+                    </ul>
+                    <button class="btn btn-danger">Eliminar</button>
+                    </div>
+                </div>
+                
+            </div> -->
         </div>
     </div>
 

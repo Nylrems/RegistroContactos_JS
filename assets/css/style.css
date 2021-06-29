@@ -1,3 +1,11 @@
 .mr-1{
     margin-right: 1%;
 }
+
+.input-error{
+    border-color: red;
+    border-width: 3px;
+}
+.margin-top{
+    margin-top: 2%;
+}
