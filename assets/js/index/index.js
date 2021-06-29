@@ -4,8 +4,8 @@ const inputName = document.getElementById("name");
 const inputPhone = document.getElementById("phone");
 const selectContactType = document.getElementById("contact-type");
 
-function CreateContactType(){
-    if(Validate()){
+function CreateContactType() {
+    if(Validate()) {
 
         const valueContact = selectContactType.value;
         const valueName = inputName.value;
@@ -48,9 +48,25 @@ function CreateContactType(){
                 mainContainer.removeChild(divColMd4);
             }
         });
-        
 
-    }   
+        divCardHeader.appendChild(h5Title);
+
+        divCardBody.appendChild(ulListGroup);
+        divCardBody.appendChild(btnDelete);
+
+        ulListGroup.appendChild(liName);
+        ulListGroup.appendChild(liPhone);
+
+        divCard.appendChild(divCardHeader);
+        divCard.appendChild(divCardBody);
+
+        mainContainer.appendChild(divColMd4);
+
+        Clear();
+    }
+    else{
+        alert("¡Debes de completar toda la info!")
+    }
 }
 
 function Clear(){
